@@ -1,0 +1,1 @@
+Claude (AI assistant) for research and drafting; curl live fetches of the production sites, robots.txt and sitemap files; Google search sampling for SERP evidence; GitHub Pages for publication. No paid SEO suites — public data only, per the brief.

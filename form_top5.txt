@@ -1,0 +1,5 @@
+1. Fix the canonical system first: housebets.win declares canonical, og:url and every hreflang alternate pointing at housebets.dev — a staging domain behind a Cloudflare Access login wall — and its sitemap index sends crawlers to eight more .dev sitemaps. Until the signals point at housebets.com, nothing else can rank properly.
+2. Consolidate .win into .com with 301s: two live domains split the brand's signals and feed the lookalike problem.
+3. Rebuild /rewards and /about-us: /, /rewards and /about-us share one identical title/meta, /about-us serves an empty H1, and /promotions' meta advertises deposit bonuses the product doesn't offer. Publish the canonical rewards statement and the licence fact page (Curaçao OGL/2024/431/0231).
+4. Win back the brand SERP: housebets.com sits in the top 5 for 0 of 10 brand queries. Outrank the affiliates, file trademark complaints against the login lookalikes, claim and answer Trustpilot.
+5. Publish /payments with a dated, self-run payout-speed test log — and fix the AI source pool so ChatGPT/Perplexity cite Housebets instead of contradicting affiliates.
