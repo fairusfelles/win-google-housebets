@@ -1,0 +1,24 @@
+query,language,result_url,owner_type,evidence,risk,action,channel
+housebets,en,https://cryptocasinoreviews.io/housebets/,review,"Ranks #1 for the brand's own name; states no welcome bonus / rakeback only — contradicts other top-5 sources",medium,outrank,search
+housebets,en,https://house-bets.net/en/,clone,"Lookalike domain carrying a full brand presentation ('a crypto casino & sportsbook with no fiat currency')",high,trademark-complaint,registrar
+housebets,en,https://wagerdb.com/casinos/housebets,review,"62.5/100; 'total trust deficit'; security 3.0 (no 2FA); lists 'no sportsbook' as a con — the sportsbook exists",medium,ask-partner,partnerships
+housebets,en,https://cryptotips.com/housebets/,review,"Claims 100% up to $1,000 / 35x / code MAX; repeats KYC-after-winning pattern and a ~9,228 USDC retained-funds case",medium,outrank,search
+housebets,en,https://www.getinspired.media/housebets-casino/,review,"Repeats the $1,000 bonus claim; notes some third-party reviews show Housebets as 'closed'",medium,outrank,search
+housebets casino,en,https://housebetcasino.com/,affiliate,"Lookalike review domain in top 5; near-official presentation; notes $HBTS/House Keys sit outside the licence",high,trademark-complaint,registrar
+housebets login,en,https://housebets.me.uk/login,clone,"Login-intent landing page on a lookalike domain; implies UK availability while noting UK is blocked / no UKGC licence",high,trademark-complaint,registrar
+housebets login,en,https://housebetsapp.com/,clone,"Presents a downloadable app (Android APK / iOS) that does not officially exist; captures login intent",high,trademark-complaint,registrar
+housebets login,en,https://house-bets.bet/,clone,"Lookalike domain: review + app claims, 'Withdrawal Issues & Scam Check' framing",high,trademark-complaint,registrar
+housebets login,en,https://housebets.uk.com/,clone,"UK-facing lookalike capturing brand + login intent",medium,trademark-complaint,registrar
+housebets bonus,en,https://cryptotips.com/housebets/promo-code,affiliate,"'Promo Code 2026: MAX for 100% up to $1,000' — offer contradicts the rakeback/lossback rewards model described by casino.clinic and cryptocasinoreviews.io",high,ask-partner,partnerships
+housebets bonus,en,https://housebets.co/en/bonuses/,clone,"Lookalike domain publishing bonus codes HOUSE100 / SPIN50 / RELOAD25 / CASH10 and '100% up to $500 + 100 free spins'",high,trademark-complaint,registrar
+housebets promo code,en,https://hbbonus.com/,affiliate,"'Up to $25,000 Free Money + Promo Code socgid' — ties an unofficial code to the $5M Wave campaign",high,ask-partner,partnerships
+housebets promo code,en,https://eu-housebets.com/,clone,"'HB150 = 150% up to ~800 CHF' — invented regional offer on a lookalike domain",high,trademark-complaint,registrar
+housebets bonus,en,housbets.com (typo domain; result #6 in the sampled SERP),clone,"Typo-squat of the brand; states no working public promo code was tested",medium,trademark-complaint,registrar
+housebets withdrawal,en,https://housebets-uk.com/,clone,"Invents fiat rails (£20 min withdrawal, PayPal, Visa/Mastercard timings) contradicting the crypto-only cashier described by independent testers",high,trademark-complaint,registrar
+housebets withdrawal,en,https://realcasinosbonus.com/casinos/housebets/,affiliate,"Headline '$25,000 Bonus, 1x Wagering'; documents a real contradiction: policy says withdrawals require completed KYC, help centre says most players are never asked",medium,ask-partner,partnerships
+housebets review,en,https://www.realmoneyaction.com/casinos/housebets-casino/,review,"2.62/5; repeats the 100% up to $1,000 claim and conflicting payout times (up to 60 min)",medium,outrank,search
+housebets scam,en,https://ie.trustpilot.com/review/housebets.com,review,"The brand's own Trustpilot profile ranks #1 for 'housebets scam'; visible review titles include 'this site is scam' and VIP-bonus complaints; profile appears unclaimed/unanswered",medium,leave,platform (claim the profile and respond — user reviews are not removable)
+housebets scam,en,https://www.scam-detector.com/validator/housebets-com-review/,other,"80.5/100 'Fair. Valid. Known' — a positive verdict worth keeping visible",low,leave,search
+housebets legit,en,https://www.askgamblers.com/ (sportsbook review),review,"Claims a 100% matched first-deposit bonus up to €1,000 at x35 that other sources say does not exist; dates the sportsbook launch to 2025 (others say 2024 / brand 2023)",medium,ask-partner,partnerships
+housebets sportsbook,en,https://cryptotips.com/housebets/,review,"Positions the book as 'credible second-tier', 'not a primary account'; notes no Bet Builder / no live streaming in its test",low,outrank,search
+housebets bonus,en,https://casino.clinic/casinos/housebets/,review,"The accurate source: verified the Curaçao register entry (OGL/2024/431/0231, Granted and Active); 1-minute $5,500 test withdrawal; no public welcome bonus",low,leave,search

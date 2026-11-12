@@ -1,44 +1,44 @@
-keyword,intent,target_page,priority,notes
-housebets,navigational,/ ,P0,"Brand home query — official site absent from top 5 on 2026-11-13; fix via canonical/sitemap repair + brand entity work"
-housebets casino,navigational,/ ,P0,Review sites own this; homepage must be the answer
-housebets login,navigational,/ (login is robots-disallowed; the homepage must rank),P0,"Highest-risk query: login intent captured by lookalike domains (housebets.me.uk, housebetsapp.com)"
-housebets bonus,commercial,/promotions,P0,"Affiliates publish 4+ contradictory offers; official promotions page must state the real model (rakeback/lossback slider, Duel Mode)"
-housebets promo code,transactional,/promotions,P0,"Codes MAX / HOUSE100 / socgid / HB150 circulate unofficially; publish one canonical statement of what codes exist"
-housebets review,informational,/about-us,P0,"Own a factual review-grade page: licence, operator, launch date, payout test results"
-housebets withdrawal,informational,/payments (new),P0,"Conflicting payout claims (1 min vs 60 min vs invented fiat rails); publish real limits, times and KYC rules"
-housebets legit,informational,/about-us,P0,Licence OGL/2024/431/0231 + Bridge Technologies B.V. must be verifiable on an official page
-housebets scam,informational,/about-us,P1,"Trustpilot profile ranks #1; official trust page + review-profile ownership is the counterweight"
-housebets sportsbook,navigational,/sportsbook (new landing),P0,"Reviewers call the book 'second-tier' and one claims none exists; needs its own indexable landing page"
-housebets app,informational,/about-us,P1,"Affiliates invent an APK/iOS app; official page must state the true (browser) position"
-housebets no kyc,commercial,/about-us,P1,WagerDB markets 'No KYC' while policy docs contradict help centre; publish one consistent KYC policy
-crypto casino,commercial,/crypto-casino (new),P1,"Category head term; listicle-dominated SERP — target via comparison content + digital PR, not the page alone"
-best crypto casino,commercial,/crypto-casino (new),P1,Same SERP family as 'crypto casino'
-bitcoin casino,commercial,/crypto-casino (new),P2,Geo listicles dominate; long-term target
-crypto casino no kyc,commercial,/crypto-casino (new),P1,Growing sub-niche; must match the published KYC policy exactly
-crypto casino instant withdrawals,commercial,/payments (new),P1,"Housebets' own headline claim, currently owned by listicles (cryptopick.bet etc.)"
-casino instant withdrawals crypto,commercial,/payments (new),P2,Variant of the payout-speed cluster
-provably fair casino,commercial,/provably-fair (new),P1,Explainer-led SERP; Housebets has the product but no page
-provably fair games,informational,/provably-fair (new),P1,Dice/crash/plinko/mines explainers rank; pair explainer with playable House Originals
-how to verify provably fair bets,informational,/provably-fair (new),P2,How-to intent; strong AI-citation candidate
-crash gambling game,commercial,/casino/games (game pages),P2,Per-game landing pages from the games catalog sitemap
-plinko casino game,commercial,/casino/games (game pages),P2,Same cluster as crash
-mines casino game,commercial,/casino/games (game pages),P2,Same cluster as crash
-dice casino game crypto,commercial,/casino/games (game pages),P2,Same cluster as crash
-crypto sportsbook,commercial,/sportsbook (new landing),P1,"Listicle SERP (coinranking, dappgambl); needs the sportsbook landing + review placements"
-bitcoin sportsbook,commercial,/sportsbook (new landing),P2,Variant cluster
-best crypto betting sites,commercial,/sportsbook (new landing),P2,Variant cluster
-online casino fast payouts,commercial,/payments (new),P2,Payout-speed cluster
-housebets duel mode,informational,/promotions,P1,"Own product term; Duel Mode (50% house-edge return) is a differentiator reviewers already cite"
-housebets rakeback,informational,/promotions,P1,Core of the real rewards model; must outrank affiliate versions of it
-housebets lossback,informational,/promotions,P2,Slider counterpart to rakeback
-housebets xp leaderboard,informational,/promotions,P2,"$150,000 leaderboard + XP race are promotable, indexable stories"
-housebets watch race,informational,/promotions,P2,$324,000 Casino Tourbillon race — high-interest branded content
-housebets $HBTS token,informational,/about-us,P1,"Must state clearly the token/airdrops sit OUTSIDE the Curaçao licence (per Housebets' own Regulatory Scope page)"
-housebets house keys,informational,/about-us,P2,Same licence-scope clarification as $HBTS
-is housebets legit,informational,/about-us,P0,Question form of the legit cluster; FAQ block target + AI-answer source
-is housebets safe,informational,/about-us,P1,Same cluster
-housebets payout proof,informational,/payments (new),P2,"Publish dated payout-speed test log (the 1-minute $5,500 test was a third party's — run and publish Housebets' own)"
-crypto casino with rakeback,commercial,/crypto-casino (new),P2,Differentiator-led long tail
-no wagering bonus crypto casino,commercial,/promotions,P2,"Affiliates claim '1x wagering $25,000' — the official page must own the true terms"
-best provably fair casino,commercial,/provably-fair (new),P2,Comparison intent inside the PF cluster
-live dealer crypto casino,commercial,/crypto-casino (new),P3,Only if live-dealer offering is real — verify before targeting
+keyword,language,market,intent,monthly_volume,difficulty,our_rank_now,target_page,priority,source
+housebets,en,global,navigational,,,outside top 5,/,1,own Google sample 2026-11-13
+housebets casino,en,global,navigational,,,outside top 5,/,1,own Google sample 2026-11-13
+housebets login,en,global,navigational,,,outside top 5,/,1,own Google sample 2026-11-13
+housebets bonus,en,global,commercial,,,outside top 5,/rewards,1,own Google sample 2026-11-13
+housebets promo code,en,global,transactional,,,outside top 5,/rewards,1,own Google sample 2026-11-13
+housebets review,en,global,informational,,,outside top 5,/about-us,1,own Google sample 2026-11-13
+is housebets legit,en,global,informational,,,outside top 5,/about-us,1,own Google sample 2026-11-13
+housebets legit,en,global,informational,,,outside top 5,/about-us,1,own Google sample 2026-11-13
+housebets withdrawal,en,global,informational,,,outside top 5,/payments (new),1,own Google sample 2026-11-13
+housebets sportsbook,en,global,navigational,,,outside top 5,/sports,1,own Google sample 2026-11-13
+housebets scam,en,global,informational,,,outside top 5,/about-us,2,own Google sample 2026-11-13
+housebets app,en,global,informational,,,answered by lookalikes,/about-us,2,own Google sample 2026-11-13
+housebets no kyc,en,global,commercial,,,not sampled in top 5,/about-us,2,review-site claims 2026-11-13
+crypto casino,en,global,commercial,,,not in sampled results,/casino,2,own Google sample 2026-11-13
+best crypto casino,en,global,commercial,,,not in sampled results,/casino,2,own Google sample 2026-11-13
+crypto casino no kyc,en,global,commercial,,,not in sampled results,/casino,2,category SERP analysis 2026-11-13
+crypto casino instant withdrawals,en,global,commercial,,,not in sampled results,/payments (new),2,own Google sample 2026-11-13
+provably fair casino,en,global,commercial,,,not in sampled results,/provably-fair,2,own Google sample 2026-11-13
+provably fair games,en,global,informational,,,not in sampled results,/provably-fair,2,own Google sample 2026-11-13
+plinko crypto,en,global,game,,,not in sampled results,/house-games,2,starter-pack example row + category analysis
+crypto sportsbook,en,global,commercial,,,not in sampled results,/sports,2,own Google sample 2026-11-13
+housebets duel mode,en,global,informational,,,not sampled,/rewards,2,product term from /promotions fetch
+housebets rakeback,en,global,informational,,,not sampled,/rewards,2,review-site coverage 2026-11-13
+bitcoin casino,en,global,commercial,,,not in sampled results,/casino,3,own Google sample 2026-11-13
+casino instant withdrawals crypto,en,global,commercial,,,not in sampled results,/payments (new),3,category SERP analysis 2026-11-13
+how to verify provably fair bets,en,global,informational,,,not sampled,/provably-fair,3,explainer SERP analysis 2026-11-13
+crash gambling game,en,global,game,,,not sampled,/house-games,3,House Originals inventory (housebets-pages.csv)
+mines casino game,en,global,game,,,not sampled,/house-games,3,House Originals inventory
+dice casino game crypto,en,global,game,,,not sampled,/house-games,3,House Originals inventory
+limbo casino game,en,global,game,,,not sampled,/house-games,3,House Originals inventory
+bitcoin sportsbook,en,global,commercial,,,not sampled,/sports,3,category SERP analysis 2026-11-13
+best crypto betting sites,en,global,commercial,,,not in sampled results,/sports,3,own Google sample 2026-11-13
+online casino fast payouts,en,global,commercial,,,not in sampled results,/payments (new),3,own Google sample 2026-11-13
+housebets lossback,en,global,informational,,,not sampled,/rewards,3,product term
+housebets xp leaderboard,en,global,informational,,,not sampled,/leaderboard,3,product term from /promotions fetch
+housebets watch race,en,global,informational,,,not sampled,/rewards,3,product term from /promotions fetch
+housebets $HBTS token,en,global,informational,,,not sampled,/about-us,2,Regulatory Scope coverage 2026-11-13
+housebets house keys,en,global,informational,,,not sampled,/about-us,3,Regulatory Scope coverage 2026-11-13
+is housebets safe,en,global,informational,,,answered by review sites,/about-us,2,own Google sample 2026-11-13
+housebets payout proof,en,global,informational,,,not sampled,/payments (new),3,trust-query analysis 2026-11-13
+crypto casino with rakeback,en,global,commercial,,,not sampled,/casino,3,differentiator long-tail analysis
+no wagering bonus crypto casino,en,global,commercial,,,not sampled,/rewards,3,affiliate-claim analysis 2026-11-13
+best provably fair casino,en,global,commercial,,,not sampled,/provably-fair,3,PF cluster analysis 2026-11-13
