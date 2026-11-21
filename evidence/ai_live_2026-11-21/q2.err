@@ -1,0 +1,94 @@
+Warning: 256-color support not detected. Using a terminal with at least 256-color support is recommended for a better visual experience.
+[STARTUP] Phase 'cleanup_ops' was started but never ended. Skipping metrics.
+[STARTUP] Cannot measure phase 'cleanup_ops': start mark 'startup:cleanup_ops:start' not found (likely cleared by reset).
+Attempt 1 failed with status 429. Retrying with backoff... _ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]}]}}
+    at throwErrorIfNotOK (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279140:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:278891:7
+    at async Models.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279950:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:332888:26
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:300609:22
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:329180:22)
+    at async GeminiClient.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:367072:22)
+    at async WebSearchToolInvocation.execute (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:349890:24)
+    at async executeToolWithHooks (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:362139:22) {
+  status: 429
+}
+Attempt 2 failed with status 429. Retrying with backoff... _ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]}]}}
+    at throwErrorIfNotOK (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279140:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:278891:7
+    at async Models.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279950:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:332888:26
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:300609:22
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:329180:22)
+    at async GeminiClient.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:367072:22)
+    at async WebSearchToolInvocation.execute (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:349890:24)
+    at async executeToolWithHooks (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:362139:22) {
+  status: 429
+}
+Attempt 3 failed with status 429. Retrying with backoff... _ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]}]}}
+    at throwErrorIfNotOK (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279140:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:278891:7
+    at async Models.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279950:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:332888:26
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:300609:22
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:329180:22)
+    at async GeminiClient.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:367072:22)
+    at async WebSearchToolInvocation.execute (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:349890:24)
+    at async executeToolWithHooks (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:362139:22) {
+  status: 429
+}
+Attempt 4 failed with status 429. Retrying with backoff... _ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]}]}}
+    at throwErrorIfNotOK (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279140:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:278891:7
+    at async Models.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279950:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:332888:26
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:300609:22
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:329180:22)
+    at async GeminiClient.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:367072:22)
+    at async WebSearchToolInvocation.execute (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:349890:24)
+    at async executeToolWithHooks (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:362139:22) {
+  status: 429
+}
+Attempt 5 failed with status 429. Retrying with backoff... _ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]}]}}
+    at throwErrorIfNotOK (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279140:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:278891:7
+    at async Models.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279950:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:332888:26
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:300609:22
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:329180:22)
+    at async GeminiClient.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:367072:22)
+    at async WebSearchToolInvocation.execute (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:349890:24)
+    at async executeToolWithHooks (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:362139:22) {
+  status: 429
+}
+Attempt 6 failed with status 429. Retrying with backoff... _ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]}]}}
+    at throwErrorIfNotOK (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279140:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:278891:7
+    at async Models.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279950:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:332888:26
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:300609:22
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:329180:22)
+    at async GeminiClient.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:367072:22)
+    at async WebSearchToolInvocation.execute (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:349890:24)
+    at async executeToolWithHooks (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:362139:22) {
+  status: 429
+}
+Attempt 7 failed with status 429. Retrying with backoff... _ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://aistudio.google.com/docs/rate-limits"}]}]}}
+    at throwErrorIfNotOK (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279140:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:278891:7
+    at async Models.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:279950:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:332888:26
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:300609:22
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:329180:22)
+    at async GeminiClient.generateContent (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:367072:22)
+    at async WebSearchToolInvocation.execute (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:349890:24)
+    at async executeToolWithHooks (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-UF44X63P.js:362139:22) {
+  status: 429
+}

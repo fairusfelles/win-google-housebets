@@ -1,0 +1,2 @@
+Warning: 256-color support not detected. Using a terminal with at least 256-color support is recommended for a better visual experience.
+Error executing tool list_directory: Path not in workspace: Attempted path "/home/hatch/workspace/housebets_seo" resolves outside the allowed workspace directories: /home/hatch/workspace/housebets_seo/evidence/ai_live_2026-11-15 or the project temp directory: /home/hatch/.gemini/tmp/ai-live-2026-11-15

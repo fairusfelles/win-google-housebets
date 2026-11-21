@@ -1,0 +1,69 @@
+Warning: 256-color support not detected. Using a terminal with at least 256-color support is recommended for a better visual experience.
+Attempt 1 failed. Retrying with backoff... Error: exception TypeError: fetch failed sending request
+    at file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:267791:13
+    at async Models.generateContentStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:268812:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:313348:19
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:289294:23
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:309615:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334930:28)
+    at async GeminiChat.streamWithRetries (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334610:29)
+    at async Turn.run (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:335668:24)
+    at async GeminiClient.processTurn (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349660:22)
+    at async GeminiClient.sendMessageStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349757:14)
+Attempt 2 failed. Retrying with backoff... Error: exception TypeError: fetch failed sending request
+    at file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:267791:13
+    at async Models.generateContentStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:268812:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:313348:19
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:289294:23
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:309615:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334930:28)
+    at async GeminiChat.streamWithRetries (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334610:29)
+    at async Turn.run (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:335668:24)
+    at async GeminiClient.processTurn (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349660:22)
+    at async GeminiClient.sendMessageStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349757:14)
+Attempt 3 failed. Retrying with backoff... Error: exception TypeError: fetch failed sending request
+    at file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:267791:13
+    at async Models.generateContentStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:268812:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:313348:19
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:289294:23
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:309615:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334930:28)
+    at async GeminiChat.streamWithRetries (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334610:29)
+    at async Turn.run (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:335668:24)
+    at async GeminiClient.processTurn (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349660:22)
+    at async GeminiClient.sendMessageStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349757:14)
+Attempt 4 failed. Retrying with backoff... Error: exception TypeError: fetch failed sending request
+    at file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:267791:13
+    at async Models.generateContentStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:268812:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:313348:19
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:289294:23
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:309615:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334930:28)
+    at async GeminiChat.streamWithRetries (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334610:29)
+    at async Turn.run (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:335668:24)
+    at async GeminiClient.processTurn (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349660:22)
+    at async GeminiClient.sendMessageStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349757:14)
+Attempt 5 failed. Retrying with backoff... Error: exception TypeError: fetch failed sending request
+    at file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:267791:13
+    at async Models.generateContentStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:268812:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:313348:19
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:289294:23
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:309615:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334930:28)
+    at async GeminiChat.streamWithRetries (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334610:29)
+    at async Turn.run (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:335668:24)
+    at async GeminiClient.processTurn (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349660:22)
+    at async GeminiClient.sendMessageStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349757:14)
+Attempt 6 failed. Retrying with backoff... Error: exception TypeError: fetch failed sending request
+    at file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:267791:13
+    at async Models.generateContentStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:268812:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:313348:19
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:289294:23
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:309615:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334930:28)
+    at async GeminiChat.streamWithRetries (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:334610:29)
+    at async Turn.run (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:335668:24)
+    at async GeminiClient.processTurn (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349660:22)
+    at async GeminiClient.sendMessageStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-RCB6BI5H.js:349757:14)
+Operation cancelled.
+[ERROR] Operation cancelled.

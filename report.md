@@ -2,11 +2,11 @@
 
 **Entry for the Housebets Contest Labs contest "Win Google for Housebets"**, structured on the starter pack's report outline, with the 8 Nov 2026 addition (AI search) inserted as section 5, before the 90 days. Audit date: 13 November 2026.
 
-**Method:** public data only — live fetches of housebets.com, housebets.win and housebets.dev (HTML, robots.txt, sitemaps), and Google search sampling (English) for 10 brand queries, 6 category queries and 4 AI-style questions. No login, no paid tools. Every finding cites what was fetched and when, so the operator can re-check each one in minutes.
+**Method:** public data only — live fetches of housebets.com, housebets.win and housebets.dev (HTML, robots.txt, sitemaps), and Google search sampling (English) for 10 brand queries, 6 category queries and 8 AI-style questions. No login, no paid tools. Every finding cites what was fetched and when, so the operator can re-check each one in minutes.
 
 **Honest framing:** this is a plan, not completed client work. Targets in §6 are goals with the reasoning shown. Where public data could not settle a question (search volumes, Core Web Vitals field data, verified-Googlebot behaviour), the report says so and names the first-party check that would — those checks are scheduled as week-1 tasks rather than papered over with invented numbers.
 
-**Companion files:** `keywords.csv` (43 keywords, starter-pack columns), `brand-serp.csv` (23 brand-SERP results with owner, risk and action), `pages.csv` (7 pages, before/after), `ai-answers.csv` (AI-search samples in the required columns), `evidence/` (raw audit evidence).
+**Companion files:** `keywords.csv` (43 keywords, starter-pack columns), `brand-serp.csv` (24 brand-SERP results with owner, risk and action), `pages.csv` (7 pages, before/after), `ai-answers.csv` (AI-search samples in the required columns), `evidence/` (raw audit evidence).
 
 ---
 
@@ -14,7 +14,7 @@
 
 1. **Google is being told the site's canonical home is a login page.** housebets.win declares canonical, og:url and every hreflang alternate pointing at **housebets.dev** — a domain that redirects to a Cloudflare Access sign-in wall — and its sitemap index sends crawlers to eight child sitemaps on the same gated host.
 2. **The brand owns none of its own searches.** Sampled 13 Nov 2026: housebets.com appears in the **top 5 for 0 of 10 brand queries**, including "housebets" and "housebets login". Lookalike domains (housebets.co, housebets.me.uk, housebetcasino.com, housebetsapp.com…) and affiliates answer instead.
-3. **The facts contradict each other — including on Housebets' own pages.** Four incompatible welcome-bonus stories circulate among affiliates, while the official /promotions meta itself advertises "deposit bonuses and free spins" that independent testers say do not exist; /, /rewards and /about-us share one identical title and near-identical meta, and /about-us serves an empty H1.
+3. **The facts contradict each other — including on Housebets' own pages.** Four incompatible welcome-bonus stories circulate among affiliates, while the official /promotions meta itself advertises "deposit bonuses and free spins" that independent testers say do not exist; /, /rewards and /about-us share one identical title and near-identical meta, and /about-us serves an empty H1. A review site in the brand set (gamblineers.com) goes further: it declares the casino permanently closed in October 2026 and has disabled its links to the operator — checked 21 Nov 2026, and false.
 4. **The winning claims are unowned.** "Instant withdrawals" is Housebets' headline and its meta description, yet the brand is absent from payout-speed answers; provably fair has a genuinely good page that nothing links to.
 5. **The trust assets are real but invisible.** A verifiable Curaçao licence (OGL/2024/431/0231, Bridge Technologies B.V., "Granted and Active"), named dispute resolution (Resolvo), an on-chain bankroll shown in the hero ($2,850,275) — none of it assembled on an official, rankable page.
 
@@ -34,6 +34,8 @@ Evidence: HTML fetched from https://www.housebets.win/ on 13 Nov 2026 contains `
 **F2 — CRITICAL · The only publicly fetchable sitemap index lives on .win and lists .dev sitemaps.**
 Evidence: `housebets.win/sitemap.xml` (HTTP 200) is an index of 8 children, all on housebets.dev: sitemap-static, sitemap-catalog-games-0/1, sitemap-catalog-providers, sitemap-sanity-blog, sitemap-sanity-promotions, sitemap-sanity-legal, sitemap-sanity-about. `housebets.com/robots.txt` declares `Sitemap: https://www.housebets.com/sitemap.xml`, but from an unverified IP that URL returns the Cloudflare challenge (F4), so its contents could not be confirmed in this audit. The games-catalog sitemaps are exactly the inventory §4 builds game pages from; today the crawl path to them runs through a login wall. Fix: publish the index on .com with .com URLs; resubmit in Search Console. Impact: high. Effort: S.
 
+**Re-verified 21 Nov 2026 (F1–F2):** still live, exactly as found — the .win homepage still declares the .dev canonical and og:url, housebets.dev still 302-redirects to a Cloudflare Access login, the .win sitemap index still lists the same eight .dev children, and robots.txt is unchanged at 524 lines with its Sitemap line still naming the .dev host (full log: `evidence/verification_2026-11-21.md`). One change since 13 Nov: the hreflang alternates (then .dev-pointing) no longer appear in the served HTML at all — homepage and inner pages checked 21 Nov — so the layer was removed rather than repaired, and the 20-language structure currently has no working hreflang. Nothing in F1–F2 was fixed during the contest window.
+
 **F3 — HIGH · Two live public domains, one site, no consolidation.**
 Evidence: housebets.com and housebets.win both serve the full site under the identical title "Best Crypto Casino & Sportsbook | Housebets" with near-duplicate homepages; .win is the *more* crawler-open of the two (full ~506 KB server-rendered HTML to a plain fetch vs a bot challenge on .com). Nothing tells a crawler which host is the brand, so links, reviews and entity signals split across both — and the ambiguity is exactly what the §3 lookalikes exploit. Fix: standardise on **.com** (it is the domain on the licence's approved-domains list and the one reviewers cite); 301 .win → .com path-for-path; keep .win registered defensively. Impact: high. Effort: M.
 
@@ -45,7 +47,9 @@ Evidence: `housebets.com/robots.txt` is 12,602 bytes / 521 Disallow rules — th
 
 ### 1.2 Languages and hreflang (20 languages)
 
-The site runs 20 languages (en + /ar /da /de /es /fi /fr /hi /hu /id /it /ja /ko /pl /pt /ru /th /tr /vi /zh, per the starter pack's languages.csv and the robots.txt prefixes). Today **every language's hreflang alternate points at the login-gated .dev host** (F1) — so the entire international signal layer is aimed at URLs that return a sign-in wall. Until that is fixed, translated titles/metas (which do exist — the .win HTML carries a proper English set, and §1.4 shows several pages done well) cannot earn their rankings. Plan: fix the host first (one config change repairs all 20 languages at once), then validate per-language self-canonicals on the money pages, then extend the keyword map per language (§2) — starting with the markets where brand-query hijacking is worst (the UK-facing lookalikes in §3 argue for en-GB attention first).
+The site runs 20 languages (en + /ar /da /de /es /fi /fr /hi /hu /id /it /ja /ko /pl /pt /ru /th /tr /vi /zh, per the starter pack's languages.csv and the robots.txt prefixes). Today **every language's hreflang alternate points at the login-gated .dev host** (F1) — so the entire international signal layer is aimed at URLs that return a sign-in wall. Until that is fixed, translated titles/metas (which do exist — the .win HTML carries a proper English set, and §1.4 shows several pages done well) cannot earn their rankings. Plan: fix the host first (one config change repairs all 20 languages at once), then validate per-language self-canonicals on the money pages, then extend the keyword map per language (§2) — sequenced by the served-market list (F6), not by where the hijacking noise is loudest: the UK-facing lookalikes in §3 are a takedown priority, and the UK is itself a restricted market, so en-GB is brand defence, never a traffic target.
+
+**F6 — HIGH · Six locales are built primarily for markets the operator itself restricts.** The restricted-jurisdictions list in the operator's own terms (as reproduced by casino.clinic from those terms; checked 21 Nov 2026, log in `evidence/verification_2026-11-21.md`) names Denmark, Germany, Austria, France, Italy, Poland, Portugal and Brazil — the primary markets of /da, /de, /fr, /it, /pl and /pt — plus Spain, Mexico, Argentina, Colombia and Peru, the largest markets behind /es. Those locales cannot convert the demand they are built to attract; they spend crawl budget and hreflang attention, and they sit awkwardly next to the licence-scope honesty §1.6 praises. Fix: align the locale set with the served-market list — retire or noindex the restricted-market locales, keep hreflang only where the operator can legally take the player (sequenced in §6, month 3). Impact: high. Effort: M.
 
 ### 1.3 Speed and Core Web Vitals
 
@@ -85,9 +89,11 @@ Clusters, in priority order:
 - **Brand defence (priority 1, 10 keywords)** → four official pages: `/` (housebets, housebets casino, housebets login), `/rewards` (bonus, promo code), `/about-us` (review, legit ×2), `/payments` — new (§4) — (withdrawal), `/sports` (sportsbook). Every one of these queries has existing demand and affiliate-grade competition; it is the cheapest traffic in the plan.
 - **Differentiator clusters (priority 2)** → provably fair (`/provably-fair` + `/house-games`), payout speed (`/payments`), category heads (`/casino` for crypto casino / best crypto casino / no-KYC cluster, `/sports` for crypto sportsbook), plus the product terms reviewers already use (duel mode, rakeback).
 - **Long tail & games (priority 3)** → per-game terms from the catalog inventory (plinko crypto is the pack's own example: → `/house-games`, priority 2 — adopted), the $HBTS/House Keys clarification queries, payout-proof and rakeback long tails.
-- **By language and market:** this map is en/global, deliberately. The other 19 languages inherit the §1 fixes first (canonical/hreflang host repair is language-agnostic); per-language maps are a month-2/3 task built on GSC data per locale, not on guesses. First expansion candidates by evidence: en-GB (the login-lookalike cluster is UK-facing, §3) and the locales whose brand SERPs show the same hijack pattern on sampling.
+- **By language and market:** this map is en/global, deliberately. The other 19 languages inherit the §1 fixes first (canonical/hreflang host repair is language-agnostic); per-language maps are a month-2/3 task built on GSC data per locale, not on guesses. First expansion candidates by evidence: the served-market locales whose brand SERPs show the same hijack pattern on sampling. (en-GB is deliberately not one: the UK-facing lookalike cluster in §3 is a takedown target, and the UK is on the restricted list, F6.)
 
 **Where we rank now and the gap to the top 3:** for the 10 brand queries the official site is **outside the top 5 in 10 of 10** (gap: the whole first page); for the 6 category queries it is **absent from the sampled results entirely** (gap: not yet in the consideration set — a content-and-citations problem, addressed by §4 pages + §6 digital PR, not by on-page tweaks alone).
+
+**The content engine is switched off.** The blog — the only surface that can hold the long-tail and guide clusters above — has published nothing since 3 Sep 2026: the blog index fetched 21 Nov 2026 lists its newest article at 3 Sep 2026, with no October or November posts at all (log: `evidence/verification_2026-11-21.md`). Eleven silent weeks, spanning this contest's own window, while the category SERPs this plan targets are fed by competitors' content. A dated weekly cadence is bundled into §6's month-3 content work; without it, the priority-3 clusters have no vehicle.
 
 ### 2.2 Satellite sites — the answer is "don't" (and what to do instead)
 
@@ -102,7 +108,7 @@ The outline asks which satellites, what each would cover, how they would link, a
 
 ## 3. Win back our brand searches
 
-Full evidence table: **`brand-serp.csv`** — 23 results across the 10 sampled queries, each with owner type, evidence, risk and the legitimate action. The pattern:
+Full evidence table: **`brand-serp.csv`** — 24 results across the 10 sampled queries, each with owner type, evidence, risk and the legitimate action. The pattern:
 
 **0 for 10.** In the 13 Nov 2026 samples, no brand query — not even "housebets" itself — returns an official page in the top 5. Three distinct problems:
 
@@ -110,7 +116,7 @@ Full evidence table: **`brand-serp.csv`** — 23 results across the 10 sampled q
 
 **3.2 The fact vacuum (housebets bonus, housebets promo code, housebets withdrawal).** At least four mutually exclusive offers sit in these top 5s: no welcome bonus at all (casino.clinic, cryptocasinoreviews.io) · 100% up to $1,000, 35x, code MAX (cryptotips) · 100% up to $500 + free spins, codes HOUSE100/SPIN50 (housebets.co) · "$25,000 free money, 1x wagering", code socgid (hbbonus.com). Withdrawal answers contradict too (1 minute vs 60 minutes vs invented fiat rails on UK lookalikes). Routes: **outrank** with the canonical official statement (§4 /rewards + /payments), and **ask-partner** corrections for affiliates — with one approved-copy feed made a programme term. (The affiliate programme sits outside the licence's scope per the Regulatory Scope page, which makes copy discipline a compliance matter, not just marketing.)
 
-**3.3 The reputation set (housebets review, housebets legit, housebets scam).** Reviewers converge on the licence being real and diverge on everything else; two negatives recur — the KYC-after-a-winning-session pattern and a documented ~9,228 USDC retained-funds case. Those are reported facts, not removables: the legitimate route is **outrank + fix the root** — an official fact page (§4 /about-us), corrections to factual errors (WagerDB's "no sportsbook" claim is simply wrong; AskGamblers' €1,000 bonus is invented), one consistent KYC policy (§1.6), and a claimed, responding Trustpilot profile. What this plan will never recommend: fake reviews, suppression services, or legal threats against truthful reporting — they backfire and, in the EU/UK, breach consumer-protection rules on review integrity.
+**3.3 The reputation set (housebets review, housebets legit, housebets scam).** Reviewers converge on the licence being real and diverge on everything else; two negatives recur — the KYC-after-a-winning-session pattern and a documented ~9,228 USDC retained-funds case. Those are reported facts, not removables: the legitimate route is **outrank + fix the root** — an official fact page (§4 /about-us), corrections to factual errors (WagerDB's "no sportsbook" claim is simply wrong; AskGamblers' €1,000 bonus is invented; and the set's most extreme error — gamblineers.com's review declaring the casino "permanently closed on October 7, 2026" and disabling its links to the operator, checked 21 Nov 2026 — is a correction request with evidence, in the month-2 corrections round), one consistent KYC policy (§1.6), and a claimed, responding Trustpilot profile. What this plan will never recommend: fake reviews, suppression services, or legal threats against truthful reporting — they backfire and, in the EU/UK, breach consumer-protection rules on review integrity.
 
 **Targets (goals, not promises):** official pages top-3 for all 10 tracked brand queries by day 90; #1 for "housebets" and "housebets login" by day 45. The incumbents are affiliates and a broken canonical, not entrenched media — that is why these targets are aggressive but sane.
 
@@ -126,7 +132,7 @@ Before/after for the home page and six more — full rows (issue, evidence, fix,
 
 **Promotions `/promotions` — before:** meta advertising "deposit bonuses and free spins" the product doesn't offer; cards without terms; path absent from the official page inventory, overlapping /rewards. **After:** merge campaigns into /rewards (301 the loser) or keep /promotions strictly as time-boxed campaigns with accurate meta ("…including the $324,000 watch race — with full terms on every offer") and terms in crawlable text. One promotions home, one truthful meta.
 
-**About us `/about-us` — before:** homepage's title/meta, empty H1, no usable facts. **After:** the review-grade fact page — H1 "About Housebets"; operator Bridge Technologies B.V.; licence OGL/2024/431/0231 with a register link; a dated timeline (ending the 2023/2024/2025 launch-year chaos in §5); the $HBTS / House Keys licence-scope note; Resolvo dispute resolution; responsible-gambling links; FAQ schema in the exact question forms of §5. Job: own "housebets review / legit / scam" and become the page AI engines cite.
+**About us `/about-us` — before:** homepage's title/meta, empty H1, no usable facts. **After:** the review-grade fact page — H1 "About Housebets"; operator Bridge Technologies B.V.; licence OGL/2024/431/0231 with a register link; a dated timeline (ending the launch-year chaos in §5 — four versions circulate: 2023, 2024, 2025, Jul 2026); the $HBTS / House Keys licence-scope note; Resolvo dispute resolution; responsible-gambling links; FAQ schema in the exact question forms of §5. Job: own "housebets review / legit / scam" and become the page AI engines cite.
 
 **Provably fair `/provably-fair` — before:** the site's best page (unique title, a meta that explains server seed + client seed + nonce) — but unlinked from the House Originals journey and without a FAQ block. **After:** keep the core; title extended to "Provably Fair Casino Games — Verify Every Bet | Housebets"; FAQ in the forms engines answer ("how to verify provably fair bets"); HowTo schema; internal links from every House Original page. Job: own the provably-fair cluster.
 
@@ -143,6 +149,8 @@ Internal-linking rule across all of the above: every money page links to /provab
 ## 5. AI search
 
 **Method note (read first).** The samples in `ai-answers.csv` were collected 13 Nov 2026 as **search-surfaced source-pool samples**: the ranked sources and claims that answer engines (ChatGPT, Perplexity, Gemini, Google AI Overviews) draw on for these questions. No AI-overview block was surfaced by the sampling tool and no direct engine sessions were run for this entry — claiming otherwise would be fabrication. The csv records, per question, what an engine would have to build its answer from, whether Housebets is mentioned, and whether that pool is correct. A week-1 task in §6 is the direct-session baseline (50 questions × 4 engines, logged in the same csv format) so movement becomes measurable.
+
+**Live direct-session addendum (15–21 Nov 2026).** One direct engine session was obtained after the audit: Q1 ("what is the best crypto casino") run live on Gemini (gemini-3.1-flash-lite) on 15 Nov 2026 — raw answer in `evidence/ai_live_2026-11-15/q1.txt`, summarised in `ai-live.csv`. It names Stake, Rollbit, BC.Game, Roobet and Shuffle; **Housebets is not mentioned**, confirming the pool finding for Q1 with a live session. Q2–Q8 could not be run live: the free Gemini API returned 429 RESOURCE_EXHAUSTED on retries on 15, 16, 17, 18 and 21 Nov 2026, and the fallbacks (Xingchi gpt-6-astra via OpenCode, 18 Nov; gpt-6.1-sol via OpenCode, 21 Nov) produced no output within 150 and 100 seconds respectively (logs: `evidence/ai_live_2026-11-18/PROBE.md`, `evidence/ai_live_2026-11-21/PROBE.md`). Those seven questions therefore rest on the 13 Nov source-pool samples only, as labelled in `ai-answers.csv`; nothing here is presented as a live session that did not happen.
 
 **What the pool says today:**
 - "Best crypto casino" and "which crypto casino has instant withdrawals" — **Housebets is never mentioned.** The brand is not in the consideration set engines assemble, despite holding the exact claim (instant withdrawals) the second question asks about.
@@ -183,7 +191,7 @@ Costs are planning figures in USD at blended contractor rates (SEO lead ~$75/h, 
 | /payments with the self-run dated payout-speed test log | SEO + Writer | $1,300 |
 | /casino category rebuild + /provably-fair FAQ/linking upgrade (§4) | Writer + Dev | $2,400 |
 | /sports depth rebuild | Writer + Dev | $1,200 |
-| Corrections round: WagerDB, AskGamblers, cryptotips (§3.3) | SEO lead | $750 |
+| Corrections round: WagerDB, AskGamblers, cryptotips, gamblineers (§3.3) | SEO lead | $750 |
 | Affiliate approved-copy feed + programme terms update (§3.2) | SEO lead | $600 |
 | Organization/FAQ/HowTo schema across fact pages | Dev | $600 |
 | **Month 2 total** | | **≈ $7,950** |
@@ -191,10 +199,10 @@ Costs are planning figures in USD at blended contractor rates (SEO lead ~$75/h, 
 ### Days 61–90 — Growth: game pages, citations, category push
 | Work | Owner | Cost |
 |---|---|---|
-| Game landing pages from the catalog sitemaps, first 30 titles | Writer + Dev | $2,600 |
+| Game landing pages from the catalog sitemaps, first 30 titles; blog restarted on a dated weekly cadence (§2.1) | Writer + Dev | $2,600 |
 | Digital PR: payout-data story + provably-fair explainer pitched to the listicle set that owns the category SERPs | SEO lead | $1,500 |
 | Review-placement programme: Housebets into the 10 comparison lists engines cite | SEO lead | $1,200 |
-| Locale validation: 20 language subtrees post-canonical-fix; per-language keyword maps v1 for the top 3 markets | SEO + Dev | $900 |
+| Locale validation: language subtrees post-canonical-fix; restricted-market locales retired or noindexed (F6); per-language keyword maps v1 for the top 3 served markets | SEO + Dev | $900 |
 | AI-search re-measurement against baseline + plan v2 | SEO lead | $600 |
 | **Month 3 total** | | **≈ $6,800** |
 
